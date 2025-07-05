@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Базовые глобальные стили для Oru */
+html, body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #FFFFFF;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Убираем дефолтные отступы и box-sizing для predictability */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ссылки: черный по умолчанию, акцентный при hover */
+a {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #FF9B20; /* акцентный цвет при наведении */
+}
+
+/* Стили для скроллбаров в iOS-стиле с твоей цветовой схемой */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #FF9B20;
+  border-radius: 4px;
+}
+
+/* Заголовки */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* iOS-like скругления для кнопок и карточек по умолчанию */
+button,
+.card {
+  border-radius: 16px;
+}
+
+/* Плавность переходов для интерактивных элементов */
+button,
+a,
+input,
+textarea {
+  transition: all 0.2s ease;
+}
